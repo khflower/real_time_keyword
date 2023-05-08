@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>collage</title>
+    <link rel="stylesheet" href="../../../static/css/2.css">
+</head>
+<body bgcolor="white">
+
+<div id="container" style="height: auto; position: relative; text-align : center;  line-height:10px;">
+
+   <h1 style="font-family: 'font1'; font-size: 30px;">SIGNAL</h1>
+    <h5 id="clock" style="color:#25c185; ">{{ time }}</h5>
+    <h5><string>1</string> {{ one_keyword }}</h5>
+    <h5><string>2</string> {{ two_keyword }}</h5>
+    <h5><string>3</string> {{ three_keyword }}</h5>
+    <h5><string>4</string> {{ four_keyword }}</h5>
+    <h5><string>5</string> {{ five_keyword }}</h5>
+    <h5><string>6</string> {{ six_keyword }}</h5>
+    <h5><string>7</string> {{ seven_keyword }}</h5>
+    <h5><string>8</string> {{ eight_keyword }}</h5>
+    <h5><string>9</string> {{ nine_keyword }}</h5>
+    <h5><string>10</string> {{ ten_keyword }}</h5>
+
+</div>
+
+<div id="advice" class="fade-in-box" style="position: absolute; left:36%; top: 35%; text-align : center; opacity: 0">
+    <a href="./about" id="advicea" style="color: black; text-decoration: none; visibility:hidden;"><h1  class="text">이미지로 보고싶진 않으신가요?</h1></a>
+</div>
+
+<script type="text/javascript">
+	var opacity =0;
+	var intervalID=0;
+
+
+	//순수 자바스크립트 클릭 이벤트 Fade in
+	document.getElementById('container').addEventListener('click', function() {
+		intervalID = setInterval(show,200);
+        document.getElementById("advicea").style.visibility ='visible';
+	});
+
+
+	function show(){
+		var div = document.getElementById("advice");
+		opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
+
+		if(opacity<1){
+        	//Fade in 핵심 부분
+			opacity = opacity+0.1;
+			div.style.opacity=opacity;
+			//img.style.opacity=opacity;
+		}
+		else{
+			clearInterval(intervalID);
+		}
+	}
+
+    </script>
+
+</body>
+</html>

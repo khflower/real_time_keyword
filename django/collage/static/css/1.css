@@ -1,0 +1,243 @@
+
+@font-face {
+  font-family : 'font1';
+  src : url(FredokaOne-Regular.ttf)
+}
+
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+  font-family: 'NanumGothic';
+  height: 100vh;
+  margin: 0;
+  background-color: #e9e9e9;
+}
+#clock{ 
+   font-family: 'Nanum Barun Gothic';
+    color:black;
+
+}
+
+#collage-top{
+    position: absolute;
+
+    right:50%;
+    float: left;
+    padding: 10px;
+    color: black;
+    width:500px;
+    height:950px;
+    background-color:white;
+    text-align: center;
+
+}
+
+#collage-container{
+	width:400px;
+	height:600px;
+	margin: 30px auto;
+    position: relative;
+    float: left;
+    background-color:white;
+    text-align: center;
+    left:45px;
+    top:-25px;
+
+}
+
+#cardnews-top{
+    position: absolute;
+    left:60%;
+    float: left;
+
+    color: black;
+    text-align : center;
+}
+
+#cardnews-container{
+
+}
+
+#keyword{
+    font-size: 15px;
+}
+
+#title{
+    font-family: 'Nanum Barun Gothic';
+    font-weight: bold;
+    font-size: 28px;
+
+    
+}
+
+#content{
+    font-size: 20px;
+
+}
+
+#image{
+max-width: 100%;
+max-height: 100%;
+}
+
+
+
+#collage-one,#collage-two,#collage-three,#collage-four,
+#collage-five,#collage-six,#collage-seven,#collage-eight,#collage-nine,#collage-ten{
+    /*
+	width:168px;
+	height:224px;
+	*/
+    padding:10px;
+	/*background#eee;
+    
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	*/
+    position:absolute;
+}
+#collage-one{
+max-width: 100%;
+max-height: 100%;
+z-index:10;
+
+/*
+transform:rotate(10deg);
+-o-transform:rotate(10deg);
+-moz-transform:rotate(10deg);
+-webkit-transform:rotate(10deg);
+*/
+}
+#collage-one:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+#collage-two{
+max-width: 100%;
+max-height: 100%;
+z-index:9;
+
+}
+#collage-two:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3); 
+    transition: transform.5s;
+}
+
+#collage-three{
+max-width: 100%;
+max-height: 100%;
+z-index:8;
+
+}
+#collage-three:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3); 
+    transition: transform.5s;
+}
+#collage-four{
+max-width: 100%;
+max-height: 100%;
+z-index:7;
+
+}
+#collage-four:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+#collage-five{
+max-width: 100%;
+max-height: 100%;
+z-index:6;
+
+}
+#collage-five:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+#collage-six{
+max-width: 100%;
+max-height: 100%;
+z-index:5;
+
+}
+#collage-six:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+#collage-seven{
+max-width: 100%;
+max-height: 100%;
+z-index:4;
+
+}
+#collage-seven:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+
+#collage-eight{
+max-width: 100%;
+max-height: 100%;
+z-index:3;
+
+}
+#collage-eight:hover{
+    z-index:7;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+
+#collage-nine{
+max-width: 100%;
+max-height: 100%;
+z-index:2;
+
+}
+#collage-nine:hover{
+    z-index:7;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+
+#collage-ten{
+max-width: 100%;
+max-height: 100%;
+z-index:1;
+
+}
+#collage-ten:hover{
+    z-index:11;
+    transform:scale(1.3, 1.3);
+    transition: transform.5s;
+}
+
+.fade-in-box {
+  padding: 10px;
+  animation: fadein 7s;
+  -moz-animation: fadein 7s; /* Firefox */
+  -webkit-animation: fadein 7s; /* Safari and Chrome */
+  -o-animation: fadein 7s; /* Opera */
+}
+
+.text{
+  display: inline; vertical-align: middle;
+  border-right: .05em solid black;
+  animation:  cursor 0.2s ease infinite;
+}

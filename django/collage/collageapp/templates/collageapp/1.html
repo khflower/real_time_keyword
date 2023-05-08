@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>collage</title>
+    <link rel="stylesheet" href="../../../static/css/1.css">
+    <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+</head>
+<body bgcolor="white" style="overflow-y: hidden">
+
+
+
+    <div class="wrapper">
+
+
+        <div id="collage-top">
+            </br>
+            <h1 id="clock" style="font-family: 'Nanum Barun Gothic', sans-serif;">{{ time }}</h1>
+            <h5 style="font-family: 'Nanum Barun Gothic', sans-serif; color:#25c185; font-size: 17px">해당 시간 기준 사용자가 가장 많이 검색한 키워드 입니다.</h5>
+
+            <div id="collage-container">
+              {% if one_link %}
+                <a href="{{ one_link }}"><img id="collage-one" src="{{ one_image }}" style="left:{{ one_left }}px; top:{{ one_top }}px;" title="{{ one_rank }}"  onmouseover="mouse_over1()"></a>
+              {% endif %}
+
+              {% if two_link %}
+                <a href="{{ two_link }}"><img id="collage-two" src="{{ two_image }}" style="left:{{ two_left }}px; top:{{ two_top }}px;" title="{{ two_rank }}"  onmouseover="mouse_over2()" ></a>
+              {% endif %}
+
+              {% if three_link %}
+                <a href="{{ three_link }}"><img id="collage-three" src="{{ three_image }}" style="left:{{ three_left }}px; top:{{ three_top }}px;" title="{{ three_rank }}"  onmouseover="mouse_over3()" ></a>
+              {% endif %}  
+
+              {% if four_link %}
+                <a href="{{ four_link }}"><img id="collage-four" src="{{ four_image }}" style="left:{{ four_left }}px; top:{{ four_top }}px;" title="{{ four_rank }}"  onmouseover="mouse_over4()"></a>
+              {% endif %}
+              
+              {% if five_link %}
+                <a href="{{ five_link }}"><img id="collage-five" src="{{ five_image }}" style="left:{{ five_left }}px; top:{{ five_top }}px;" title="{{ five_rank }}"  onmouseover="mouse_over5()"></a>
+              {% endif %}
+              
+              {% if six_link %}
+                <a href="{{ six_link }}"><img id="collage-six" src="{{ six_image }}" style="left:{{ six_left }}px; top:{{ six_top }}px;" title="{{ six_rank }}"  onmouseover="mouse_over6()"></a>
+              {% endif %}
+              
+              {% if seven_link %}
+                <a href="{{ seven_link }}"><img id="collage-seven" src="{{ seven_image }}" style="left:{{ seven_left }}px; top:{{ seven_top }}px;" title="{{ seven_rank }}"  onmouseover="mouse_over7()"></a>
+              {% endif %}
+              
+              {% if eight_link %}
+                <a href="{{ eight_link }}"><img id="collage-eight" src="{{ eight_image }}" style="left:{{ eight_left }}px; top:{{ eight_top }}px;" title="{{ eight_rank }}"  onmouseover="mouse_over8()"></a>
+              {% endif %}
+              
+              {% if nine_link %}
+                <a href="{{ nine_link }}"><img id="collage-nine" src="{{ nine_image }}" style="left:{{ nine_left }}px; top:{{ nine_top }}px;" title="{{ nine_rank }}"  title="{{ one_rank }}"  onmouseover="mouse_over9()"></a>
+              {% endif %}
+              
+              {% if ten_link %}
+                <a href="{{ ten_link }}"><img id="collage-ten" src="{{ ten_image }}" style="left:{{ ten_left }}px; top:{{ ten_top }}px;" title="{{ ten_rank }}"  onmouseover="mouse_over10()"></a>
+              {% endif %}
+            </div>
+                
+        </div>
+
+
+        <div id="cardnews-top">
+
+            <h1 style="font-family: 'font1'; font-size: 60px"><img src="../../../static/img/signal_logo.png"></h1>
+            <h3>원하는 소식을 가장 빠르고 정확하게 전달해드립니다.</h3>
+            <h3 id="cardnews-explanation">궁금한 키워드에 마우스를 올려보세요</h3>
+
+            <div id="cardnews-container" style="visibility:hidden; width:500px; height:700px;" >
+                 <p id ="keyword"></p>
+                 <p id ="title"></p>
+                 <img id="image" src="3_new.png">
+                 <p id ="content" style="text-align:left"></p>
+            </div>
+        <div>
+
+
+
+        <script type="text/javascript">
+            
+           
+
+
+
+            function mouse_over1(){
+                let keyword1="{{ one_keyword|safe }}";
+                let innertitle1="{{ one_title|safe }}";                
+                document.getElementById("title").innerText=innertitle1;
+                let innercontent1="{{ one_content|safe }}";    
+                document.getElementById("keyword").innerText=keyword1;
+                document.getElementById("content").innerText=innercontent1;
+                document.getElementById("image").src="{{ one_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+
+
+
+            function mouse_over2(){
+                
+                let keyword2="{{ two_keyword|safe }}";
+                let innertitle2="{{ two_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle2;
+                let innercontent2="{{ two_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword2;
+                document.getElementById("content").innerText=innercontent2;
+                document.getElementById("image").src="{{ two_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+
+            function mouse_over3(){
+                
+                let keyword3="{{ three_keyword|safe }}";
+                let innertitle3="{{ three_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle3;
+                let innercontent3="{{ three_content|safe }}";
+                document.getElementById("keyword").innerText=keyword3;
+                document.getElementById("content").innerText=innercontent3;
+                document.getElementById("image").src="{{ three_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+
+            function mouse_over4(){
+                
+                let keyword4="{{ four_keyword|safe }}";
+                let innertitle4="{{ four_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle4;
+                let innercontent4="{{ four_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword4;
+                document.getElementById("content").innerText=innercontent4;
+                document.getElementById("image").src="{{ four_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+
+            function mouse_over5(){
+                
+                let keyword5="{{ five_keyword|safe }}";
+                let innertitle5="{{ five_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle5;
+                let innercontent5="{{ five_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword5;
+                document.getElementById("content").innerText=innercontent5;
+                document.getElementById("image").src="{{ five_newsimage }}";   
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+
+            
+            function mouse_over6(){
+                
+                let keyword6="{{ six_keyword|safe }}";
+                let innertitle6="{{ six_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle6;
+                let innercontent6="{{ six_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword6;
+                document.getElementById("content").innerText=innercontent6;
+                document.getElementById("image").src="{{ six_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+            
+            function mouse_over7(){
+                
+                let keyword7="{{ seven_keyword|safe }}";
+                let innertitle7="{{ seven_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle7;
+                let innercontent7="{{ seven_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword7;
+                document.getElementById("content").innerText=innercontent7;
+                document.getElementById("image").src="{{ seven_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+            
+            function mouse_over8(){
+                
+                let keyword8="{{ eight_keyword|safe }}";
+                let innertitle8="{{ eight_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle8;
+                let innercontent8="{{ eight_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword8;
+                document.getElementById("content").innerText=innercontent8;
+                document.getElementById("image").src="{{ eight_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+            
+            function mouse_over9(){
+                
+                let keyword9="{{ nine_keyword|safe }}";
+                let innertitle9="{{ nine_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle9;
+                let innercontent9="{{ nine_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword9;
+                document.getElementById("content").innerText=innercontent9;
+                document.getElementById("image").src="{{ nine_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+            
+            function mouse_over10(){
+                
+                let keyword10="{{ ten_keyword|safe }}";
+                let innertitle10="{{ ten_title|safe }}"; 
+                document.getElementById("title").innerText=innertitle10;
+                let innercontent10="{{ ten_content|safe }}"; 
+                document.getElementById("keyword").innerText=keyword10;
+                document.getElementById("content").innerText=innercontent10;
+                document.getElementById("image").src="{{ ten_newsimage }}";
+                document.getElementById("cardnews-container").style.visibility ='visible';
+                document.getElementById("cardnews-explanation").remove();
+            }
+            
+
+
+
+        </script>
+    </div>
+
+</body>
+</html>

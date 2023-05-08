@@ -1,0 +1,48 @@
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family : 'font1';
+  src : url(FredokaOne-Regular.ttf)
+}
+
+
+body {
+  font-family: 'Nanum Barun Gothic';
+  height: 100vh;
+  margin: 0;
+}
+
+
+#container{
+    place-items: center;
+    position: absolute;
+    width:300px;
+	height:400px;
+    margin: -230px 0px 0px -170px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #777;
+}
+.fade-in-box {
+  padding: 10px;
+  animation: fadein 7s;
+  -moz-animation: fadein 7s; /* Firefox */
+  -webkit-animation: fadein 7s; /* Safari and Chrome */
+  -o-animation: fadein 7s; /* Opera */
+}
+
+
+.text{
+  background-color:white;
+  display: inline; 
+  vertical-align: middle;
+}
